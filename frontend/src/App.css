@@ -1,0 +1,126 @@
+/* Variables for the app's theme */
+:root { 
+  --background-color: #f4f7f9;
+  --card-background: #ffffff;
+  --primary-text: #172d44;
+  --primary-color: #5ee3f4;
+  --error-color: #e74c3c;
+  --value-color: #327286;
+}
+
+ 
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: var(--background-color);
+  color: var(--primary-text);
+  display: flex;
+  justify-content: center;
+  padding: 0 16px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width:480px;
+  width: 100%;
+  margin-top:40px;
+}
+
+header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.7rem;
+  margin:0;
+  font-weight:bold;
+}
+
+@media (min-width: 600px) {
+  h1 {
+    font-size:2rem;
+  }
+}
+
+.input-card {
+  background-color: var(--card-background);
+   padding: 24px;
+ border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+ margin-bottom: 24px;
+}
+
+textarea {
+  width: 100%;
+ min-height: 120px;
+  padding: 1rem;
+   font-size:1rem;
+  font-family:inherit;
+  line-height: 1.4;
+  color: var(--primary-text);
+  background: rgba(255, 255, 255, 0.889);
+   border: 2px solid #000000;
+ border-radius: 8px;
+  box-sizing: border-box;
+   margin-bottom: 1rem;
+  resize: vertical;
+} 
+
+textarea::placeholder {
+  color: #757e7e;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  color: #053f5d;
+  background: var(--primary-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+  min-height: 48px;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+}
+button:hover {
+  background: #7bff4f;
+}
+button:disabled {
+  background-color: #95a5a6;
+}
+
+.result-card {
+  background: var(--card-background);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+ 
+.emotion-label, .confidence-label {
+  font-size: 0.9rem;
+  color:#7f8c8d;
+}
+
+.emotion-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color:var(--value-color);
+  margin: 5px 0 20px 0;
+
+}
+ 
+
+.confidence-value {
+  font-size:1.2rem;
+  font-weight: bold;
+ margin-top:5px;
+  color: var(--primary-text);
+}
